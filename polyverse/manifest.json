@@ -1,0 +1,13 @@
+{
+  "config": {
+    "clustering_method": "single-machine",
+    "files": {},
+    "pvscramble": false,
+    "app_name": "pvdemo-nodejs",
+    "log_opts": {
+      "max_size": "50m",
+      "max_file": "100"
+    },
+    "storage_driver": "aufs"
+  }
+}
