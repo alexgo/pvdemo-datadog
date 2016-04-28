@@ -1,2 +1,2 @@
-docker build -t="polyverse/pvdemo-nodejs" .
-docker run -d -p 8080:8080 polyverse/pvdemo-nodejs
+docker build -t="polyverse/pvdemo-datadog" .
+docker run -d -p 8080:8080 polyverse/pvdemo-datadog

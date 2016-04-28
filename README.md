@@ -1,2 +1,2 @@
-# pvdemo-nodejs
-Node.JS demo for Polyverse
+# pvdemo-datadog
+Node.JS and DataDog demo for Polyverse

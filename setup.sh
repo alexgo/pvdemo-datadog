@@ -3,7 +3,7 @@
 		displayConfigJson() {
 			echo "{
 	\"config\": {
-		\"app_name\": \"pvdemo-nodejs\",
+		\"app_name\": \"pvdemo-datadog\",
 		\"clustering_method\": \"single-machine\",
 		\"docker_config\": \"{\\n\\t\\\"auths\\\": {\\n\\t\\t\\\"https://index.docker.io/v1/\\\": {\\n\\t\\t\\t\\\"auth\\\": \\\"YWxleGdvOiE0MUtpZHNDb25jdXJpeA==\\\",\\n\\t\\t\\t\\\"email\\\": \\\"alex@polyverse.io\\\"\\n\\t\\t}\\n\\t}\\n}\",
 		\"docker_images_to_pull\": \"\",
@@ -15,11 +15,11 @@
 		\"output_format\": \"shell\",
 		\"post_startup_script\": \"\",
 		\"pvscramble\": \"false\",
-		\"route_def\": \"app = function() {\\n  return {\\n    Name: function() {\\n      return \\\"pvdemo-nodejs\\\"; //Replace with any friendly name you\\n    },\\n    IsRequestSupported: function(r,c) {\\n      return true;\\n    },\\n    GetContainerInfo: function(r,c) {\\n      return {\\n        ID:                 \\\"pvdemo-nodejs\\\",\\n        BaseImage:          \\\"polyverse/pvdemo-nodejs\\\", //Put your application’s image name here\\n        Timeout:            365 * 24 * 60 * 60 * 1000000000,\\n        PerInstanceTimeout: 5 * 1000000000, //How often do you want to replace instances (in nanoseconds)? Default: 5 seconds\\n        DesiredInstances:   100, //How many containers do you want running concurrently\\n        IsStateless:        true,\\n        HealthCheckURLPath: \\\"/\\\" ,\\n        LaunchGracePeriod:  60 * 1000000000,\\n        Cmd:               [], // Optional. Specify arguments to be sent to container on launch\\n        BindingPort:        8080 // Specify the port that your container application is listening to\\n      };\\n    },\\n    ValidationInfo: function() {\\n      return {\\n        PositiveRequests: [],\\n        NegativeRequests: []\\n      };\\n    }\\n  };\\n}();\\n\",
+		\"route_def\": \"app = function() {\\n  return {\\n    Name: function() {\\n      return \\\"pvdemo-datadog\\\"; //Replace with any friendly name you\\n    },\\n    IsRequestSupported: function(r,c) {\\n      return true;\\n    },\\n    GetContainerInfo: function(r,c) {\\n      return {\\n        ID:                 \\\"pvdemo-datadog\\\",\\n        BaseImage:          \\\"polyverse/pvdemo-datadog\\\", //Put your application’s image name here\\n        Timeout:            365 * 24 * 60 * 60 * 1000000000,\\n        PerInstanceTimeout: 5 * 1000000000, //How often do you want to replace instances (in nanoseconds)? Default: 5 seconds\\n        DesiredInstances:   100, //How many containers do you want running concurrently\\n        IsStateless:        true,\\n        HealthCheckURLPath: \\\"/\\\" ,\\n        LaunchGracePeriod:  60 * 1000000000,\\n        Cmd:               [], // Optional. Specify arguments to be sent to container on launch\\n        BindingPort:        8080 // Specify the port that your container application is listening to\\n      };\\n    },\\n    ValidationInfo: function() {\\n      return {\\n        PositiveRequests: [],\\n        NegativeRequests: []\\n      };\\n    }\\n  };\\n}();\\n\",
 		\"router_port\": \"8080\",
 		\"ssl_cert\": \"\",
 		\"ssl_cert_private_key\": \"\",
-                \"docker_images_to_pull\": \"polyverse/pvdemo-nodejs\",
+                \"docker_images_to_pull\": \"polyverse/pvdemo-datadog\",
 		\"ssl_hostname\": \"\",
 		\"ssl_required\": \"false\",
 		\"statter_endpoint\": \"127.0.0.1:8125\",

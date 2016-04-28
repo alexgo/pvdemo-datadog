@@ -1,15 +1,15 @@
 app = function() {
   return {
     Name: function() {
-      return "pvdemo-nodejs"; //Replace with any friendly name you
+      return "pvdemo-datadog"; //Replace with any friendly name you
     },
     IsRequestSupported: function(r,c) {
       return true;
     },
     GetContainerInfo: function(r,c) {
       return {
-        ID:                 "pvdemo-nodejs",
-        BaseImage:          "polyverse/pvdemo-nodejs", //Put your application’s image name here
+        ID:                 "pvdemo-datadog",
+        BaseImage:          "polyverse/pvdemo-datadog", //Put your application’s image name here
         Timeout:            365 * 24 * 60 * 60 * 1000000000,
         PerInstanceTimeout: 5 * 1000000000, //How often do you want to replace instances (in nanoseconds)? Default: 5 seconds
         DesiredInstances:   100, //How many containers do you want running concurrently
